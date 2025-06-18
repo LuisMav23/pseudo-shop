@@ -3,3 +3,16 @@
 # Placeholder function:
 # function display_products()
 
+product_list = []
+
+function display_products()
+
+    for product in product_list
+        print "Name: " + product["name"]
+        print "Price: " + product["price"]
+        print "Brand: " + product["brand"]
+        print "Color: " + product["color"]
+        print "Weight: " + product["weight"] + " kg"
+        print "Height: " + product["height"] + " m"
+		print "Length: " + product["length"] + " m"
+		print "Width: " + product["width"] + " m"
