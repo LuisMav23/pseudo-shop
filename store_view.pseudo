@@ -8,7 +8,7 @@ product_list = []
 function display_products()
 	print "MavRick Store - Product Listings"
     print "-----------------------------"
-    
+
     for product in product_list
         print "Name: " + product["name"]
         print "Price: " + product["price"]
@@ -18,3 +18,4 @@ function display_products()
         print "Height: " + product["height"] + " m"
 		print "Length: " + product["length"] + " m"
 		print "Width: " + product["width"] + " m"
+		print "-----------------------------"
