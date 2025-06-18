@@ -11,19 +11,16 @@
 #     brand: "Generic"
 # }
 
-# Placeholder product list
-product_list = []
 
 class ProductHandler: 
 	Attributes of initialized class:
-		self.product_list = []
+		self.product_list = [] # Stores the product information
 
 	Method function add_product(input includes: name_of_product, price_of_product, width_of_product, height_of_product, length_of_product, weight_of_product, color_of_product, brand_of_product, user_role):
 	
 		if user_role is not "seller":
 			print "not authorized"
 			return
-
 		Set product_detail = {
 			name: name_of_product,
 			price: price_of_product,
