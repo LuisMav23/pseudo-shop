@@ -26,3 +26,15 @@ Function create_user(input includes: name, email, password, role)
     # Store the user in the database
     append new_user to user_database
     print "User created successfully"
+
+# Function to log in an existing user
+Function login_user(input includes: email, password)
+    # Search for a matching user
+    for user in user_database
+        if user["email"] == email and user["password"] == password
+            print "Login successful"
+            return "success"
+
+    # If no match is found
+    print "Login failed"
+    return "failure"
