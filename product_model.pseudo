@@ -18,3 +18,16 @@ class ProductHandler:
 	Attributes of initialized class:
 		self.product_list = []
 
+	Method function add_product(input includes: name_of_product, price_of_product, width_of_product, height_of_product, length_of_product, weight_of_product, color_of_product, brand_of_product):
+
+		Set product_detail = {
+			name: name_of_product,
+			price: price_of_product,
+			width: width_of_product,
+			height: height_of_product,
+			length: length_of_product,
+			weight: weight_of_product,
+			 color: color_of_product,
+			brand: brand_of_product
+		}
+		Append product_detail to self.product_list
