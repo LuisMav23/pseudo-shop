@@ -16,24 +16,12 @@ class ProductHandler:
 	Attributes of initialized class:
 		self.product_list = [] # Stores the product information
 
-	Method function add_product(input includes: name_of_product, price_of_product, width_of_product, height_of_product, length_of_product, weight_of_product, color_of_product, brand_of_product, user_role):
-	
-		if user_role is not "seller":
-			print "not authorized"
-			return
-		Set product_detail = {
-			name: name_of_product,
-			price: price_of_product,
-			width: width_of_product,
-			height: height_of_product,
-			length: length_of_product,
-			weight: weight_of_product,
-			 color: color_of_product,
-			brand: brand_of_product
-		}
-		Append product_detail to self.product_list
 	Method function filter_products(input includes: price_range=[0, inf], width_range=[0, inf], height_range=[0, inf], legth_range=[0,inf], weight_range=[0, inf], color_of_product=None, brand_of_product=None):
+		# The numerical inputs needs to have a specified range [minimum, maximum], the default for all is [0, inf (infinity)]
+		# If the input is numerical, like width_range. Then width_range[0] pertains to the lower limit of the range (minimum) and width_range[1] pertains to the upper limit of the range (maximum)
 		Set filtered_products = copy of self.product_list
+
+		# Filtering by deduction
 		for product in filtered_products:
 			if product[“price”] is not within price_range:
 				remove product from filtered_products
