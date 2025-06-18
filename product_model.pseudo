@@ -32,3 +32,5 @@ class ProductHandler:
 			brand: brand_of_product
 		}
 		Append product_detail to self.product_list
+	Method function filter_products(input includes: price_range=[0, inf], width_range=[0, inf], height_range=[0, inf], legth_range=[0,inf], weight_range=[0, inf], color_of_product=None, brand_of_product=None):
+		pass
