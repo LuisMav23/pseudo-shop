@@ -5,7 +5,7 @@
 
 handler = ProductHandler()
 
-function filter_products(input includes: price_range=[0, inf], width_range=[0, inf], height_range=[0, inf], legth_range=[0,inf], weight_range=[0, inf], color_of_product=None, brand_of_product=None):
+function filter_products(input includes: price_range=[0, inf], width_range=[0, inf], height_range=[0, inf], length_range=[0,inf], weight_range=[0, inf], color_of_product=None, brand_of_product=None):
 		# The numerical inputs needs to have a specified range [minimum, maximum], the default for all is [0, inf (infinity)]
 		# If the input is numerical, like width_range. Then width_range[0] pertains to the lower limit of the range (minimum) and width_range[1] pertains to the upper limit of the range (maximum)
 		Set filtered_products = copy of handler.product_list
@@ -28,3 +28,20 @@ function filter_products(input includes: price_range=[0, inf], width_range=[0, i
 				remove product from filtered_products
 
 		return filtered_products
+
+function display_products(input includes: price_range=[0, inf], width_range=[0, inf], height_range=[0, inf], length_range=[0,inf], weight_range=[0, inf], color_of_product=None, brand_of_product=None)
+	print "MavRick Store - Product Listings"
+  print "-----------------------------"
+  
+  product_list = filter_products(price_range, width_range, height_range, length_range, weight_range, color_of_product, brand_of_product)
+
+    for product in product_list
+        print "Name: " + product["name"]
+        print "Price: " + product["price"]
+        print "Brand: " + product["brand"]
+        print "Color: " + product["color"]
+        print "Weight: " + product["weight"] + " kg"
+        print "Height: " + product["height"] + " m"
+		print "Length: " + product["length"] + " m"
+		print "Width: " + product["width"] + " m"
+		print "-----------------------------"
