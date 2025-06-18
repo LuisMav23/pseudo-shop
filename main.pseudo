@@ -4,5 +4,59 @@
 # Feel free to modify this to simulate application flow
 
 # Run the app
-print "Welcome to the Pseudo Shop!"
+print "Welcome to the MavRick Shop!"
+
+if user is not logged in:
+	print "Would you like to login or signup?"
+	response = input from user
+	while True:
+		if response is "login":
+			print "Enter your email:"
+			email = input from user
+			print "Enter your password"
+			password = input from password
+			
+			login_user(email, password)
+			
+			break
+			
+		else if response is "signup":
+			print "Enter your name:"
+			name = input from user
+			print "Enter your email:"
+			email = input from user
+			print "Enter your password"
+			password = input from password
+			print "Enter your role:"
+			role = input from user
+			
+			create_user(name, email, password, role)
+			
+			break
+		else:
+			print "Please only enter login or signup"
+			response = input from user
+			
+While True:
+	print "Pick what you want to do:"
+	print "1 - Add products"
+	print "2 - Display products"
+	print "3 - Exit"
+	option = input from user
+	While True:
+		if option is 1:
+			print "Please enter product details in this format: 'name;price;width;height;length;weight;color;brand'"
+			product_details = input from user
+			add_product(*product_details.split(";"), user['role']) # parsed output
+		
+		if option is 2:
+			print "Please enter product filters in this format (leave blank if none): 'name;price;width;height;length;weight;color;brand'"
+			product_filters = input from user
+			display_products(*product_filters.split(";")) # parsed output
+		
+		if option is 3:
+			print "Thank you for using MavRick! Come again!"
+			break
+			
+		
 
