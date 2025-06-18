@@ -14,3 +14,7 @@
 # Placeholder product list
 product_list = []
 
+class ProductHandler: 
+	Attributes of initialized class:
+		self.product_list = []
+
